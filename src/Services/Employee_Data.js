@@ -4,7 +4,7 @@ const Employee_Data = [
     firstName: "Arpita",
     lastName: "Garg",
     email: "arpita@gmail.com",
-    salary: "70,000",
+    salary: 70000,
     date: "1-Jan-2023",
   },
   {
@@ -12,7 +12,7 @@ const Employee_Data = [
     firstName: "Arpita",
     lastName: "Gupta",
     email: "arpitagupta@gmail.com",
-    salary: "75,000",
+    salary: 75000,
     date: "2-Jan-2023",
   },
   {
@@ -20,7 +20,7 @@ const Employee_Data = [
     firstName: "Yachika",
     lastName: "Garg",
     email: "yachika@gmail.com",
-    salary: "80,000",
+    salary: 80000,
     date: "3-Jan-2023",
   },
   {
@@ -28,7 +28,7 @@ const Employee_Data = [
     firstName: "Yachika",
     lastName: "Gupta",
     email: "yachikagupta@gmail.com",
-    salary: "85,000",
+    salary: 85000,
     date: "4-Jan-2023",
   },
   {
@@ -36,7 +36,7 @@ const Employee_Data = [
     firstName: "Yachu",
     lastName: "Garg",
     email: "yachu@gmail.com",
-    salary: "90,000",
+    salary: 90000,
     date: "5-Jan-2023",
   },
   {
@@ -44,7 +44,7 @@ const Employee_Data = [
     firstName: "Yachu",
     lastName: "Gupta",
     email: "yachugupta@gmail.com",
-    salary: "95,000",
+    salary: 95000,
     date: "6-Jan-2023",
   },
   {
@@ -52,7 +52,7 @@ const Employee_Data = [
     firstName: "Yacha",
     lastName: "Garg",
     email: "yacha@gmail.com",
-    salary: "65,000",
+    salary: 65000,
     date: "7-Jan-2023",
   },
   {
@@ -60,7 +60,7 @@ const Employee_Data = [
     firstName: "Yacha",
     lastName: "Gupta",
     email: "yachagupta@gmail.com",
-    salary: "60,000",
+    salary: 60000,
     date: "8-Jan-2023",
   },
   {
@@ -68,7 +68,7 @@ const Employee_Data = [
     firstName: "Gola",
     lastName: "Garg",
     email: "gola@gmail.com",
-    salary: "55,000",
+    salary: 55000,
     date: "9-Jan-2023",
   },
   {
@@ -76,9 +76,9 @@ const Employee_Data = [
     firstName: "Venomous",
     lastName: "Gola",
     email: "venomous_gola@gmail.com",
-    salary: "50,000",
+    salary: 50000,
     date: "10-Jan-2023",
-  }
+  },
 ];
 
 export default Employee_Data;
