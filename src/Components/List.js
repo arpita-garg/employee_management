@@ -1,4 +1,5 @@
 import React from "react";
+// import { DateTime } from "react-intl-datetime-format";
 
 export default function List({ employees, handleEdit, handleDelete }) {
   const formatter = new Intl.NumberFormat("en-IN", {
@@ -6,6 +7,14 @@ export default function List({ employees, handleEdit, handleDelete }) {
     currency: "INR",
     minimumFractionDigits: null,
   });
+
+  // const dateFormat = new Intl.DateTimeFormat("en-US"
+  // // , {
+  // //   year: "numeric",
+  // //   month: "numeric",
+  // //   day: "numeric",
+  // // }
+  // );
 
   return (
     <>
@@ -34,6 +43,7 @@ export default function List({ employees, handleEdit, handleDelete }) {
                   <td>{employee.email}</td>
                   <td>{formatter.format(employee.salary)}</td>
                   <td>{employee.date}</td>
+                  {/* <td>{formattedDate.format(employee.date)}</td> */}
                   <td className="text-right">
                     <button
                       onClick={() => handleEdit(employee.id)}
