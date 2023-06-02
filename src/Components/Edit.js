@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import Swal from "sweetalert2";
 
 export default function Edit({
   employees,
@@ -14,7 +15,46 @@ export default function Edit({
   const [salary, setSalary] = useState(selectedEmployee.salary);
   const [date, setDate] = useState(selectedEmployee.date);
 
-  const handleUpdate = () => {};
+  const handleUpdate = (e) => {
+    e.preventDefault();
+
+    if (!firstName || !lastName || !email || !salary || !date) {
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: "All fields are required",
+        showConfirmButton: true,
+      });
+    }
+
+      const employee = {
+        id,
+        firstName,
+        lastName,
+        email,
+        salary,
+        date,
+      };
+
+      for (let i = 0; i < employees.length; i++) {
+        if (employees[i].id === id) {
+          employees.splice(i, 1, employee);
+          break;
+        }
+      }
+
+      setEmployees(employees);
+      setIsEditing(false);
+
+      Swal.fire({
+        icon: "success",
+        title: "Updated!",
+        text: `${employee.firstName} ${employee.lastName}'s data has been updated`,
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    
+  }
 
   return (
     <>
@@ -71,14 +111,16 @@ export default function Edit({
               setDate(e.target.value);
             }}
           />
-          <div style={{marginTop: "30px"}}>
-            <input type="submit" value="Update"/>
+          <div style={{ marginTop: "30px" }}>
+            <input type="submit" value="Update" />
             <input
-            style={{marginLeft: "12px"}}
-            className="muted-button"
-            type="button"
-            value="Cancel"
-            onClick={()=>{setIsEditing(false)}}
+              style={{ marginLeft: "12px" }}
+              className="muted-button"
+              type="button"
+              value="Cancel"
+              onClick={() => {
+                setIsEditing(false);
+              }}
             />
           </div>
         </form>

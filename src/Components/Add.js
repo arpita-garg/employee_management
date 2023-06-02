@@ -25,7 +25,7 @@ export default function Add({ employees, setEmployees, setIsAdding }) {
       });
     }
     const id = employees.length + 1;
-    // const newEmployee = [
+    // const newEmployee = {
     //   id: id,
     //    // here id before ":" is key and id after ":" is value.
     //   firstName: firstName,
@@ -33,7 +33,7 @@ export default function Add({ employees, setEmployees, setIsAdding }) {
     //   email: email,
     //   salary: salary,
     //   date: date
-    // ];
+    // };
 
     // Declaration of both newEmployee are right.
     // When both id and value is same i.e. id,
